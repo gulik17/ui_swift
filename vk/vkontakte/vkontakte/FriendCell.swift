@@ -6,4 +6,9 @@
 //  Copyright © 2019 Home. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class FriendCell: UITableViewCell {
+    @IBOutlet weak var userName: UILabel!
+    
+}

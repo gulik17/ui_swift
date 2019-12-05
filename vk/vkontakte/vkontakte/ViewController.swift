@@ -12,11 +12,9 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    
-    
-    
+
     @IBAction func loginButtonAction(_ sender: Any) {
-        if (loginTextField.text == "Admin" && passwordTextField.text == "000123") {
+        if (loginTextField.text == "" && passwordTextField.text == "") {
             performSegue(withIdentifier: "loginSuccess", sender: sender)
         } else {
             showAlert(title: "Error", message: "Login or Password is wrong", titleAction: "OK")

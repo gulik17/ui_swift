@@ -8,6 +8,11 @@
 
 import UIKit
 
-class User: Object {
-
+class User {
+    var id = 0
+    var first_name = ""
+    var last_name = ""
+    var avatar = ""
+    var photos = [String]()
+        
 }

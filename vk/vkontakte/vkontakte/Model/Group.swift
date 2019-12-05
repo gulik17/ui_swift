@@ -8,6 +8,9 @@
 
 import UIKit
 
-class Group: Object {
-
+class Group {
+    var id = 0
+    var name = ""
+    var avatar = ""
+    
 }
