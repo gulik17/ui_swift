@@ -22,6 +22,8 @@
 		C31369552396811E000E0230 /* GroupList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31369542396811E000E0230 /* GroupList.swift */; };
 		C31369572396813E000E0230 /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31369562396813E000E0230 /* GroupCell.swift */; };
 		C3136959239683F2000E0230 /* AllGroupList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3136958239683F2000E0230 /* AllGroupList.swift */; };
+		C323B036239998000099B2AC /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C323B035239998000099B2AC /* CustomImageView.swift */; };
+		C37BEC4F239A3F6900C4880D /* LikeBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37BEC4E239A3F6900C4880D /* LikeBtn.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		C31369542396811E000E0230 /* GroupList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupList.swift; sourceTree = "<group>"; };
 		C31369562396813E000E0230 /* GroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
 		C3136958239683F2000E0230 /* AllGroupList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupList.swift; sourceTree = "<group>"; };
+		C323B035239998000099B2AC /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
+		C37BEC4E239A3F6900C4880D /* LikeBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeBtn.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,7 @@
 		C31284B0238922FA00CD0810 /* vkontakte */ = {
 			isa = PBXGroup;
 			children = (
+				C323B034239997860099B2AC /* UI */,
 				C313694F239679B1000E0230 /* Model */,
 				C31284B1238922FA00CD0810 /* AppDelegate.swift */,
 				C31284B3238922FA00CD0810 /* SceneDelegate.swift */,
@@ -100,6 +105,15 @@
 				C313695223967CD8000E0230 /* Group.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		C323B034239997860099B2AC /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				C323B035239998000099B2AC /* CustomImageView.swift */,
+				C37BEC4E239A3F6900C4880D /* LikeBtn.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,9 +196,11 @@
 				C31369552396811E000E0230 /* GroupList.swift in Sources */,
 				C3136959239683F2000E0230 /* AllGroupList.swift in Sources */,
 				C313695123967B3C000E0230 /* User.swift in Sources */,
+				C37BEC4F239A3F6900C4880D /* LikeBtn.swift in Sources */,
 				C31284B4238922FA00CD0810 /* SceneDelegate.swift in Sources */,
 				C31369482396340A000E0230 /* FriendList.swift in Sources */,
 				C313694A239647D4000E0230 /* FriendCell.swift in Sources */,
+				C323B036239998000099B2AC /* CustomImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +347,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B5YT5383FD;
 				INFOPLIST_FILE = vkontakte/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -338,7 +355,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = homecompany.vkontakte;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -349,6 +366,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B5YT5383FD;
 				INFOPLIST_FILE = vkontakte/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -356,7 +374,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = homecompany.vkontakte;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
