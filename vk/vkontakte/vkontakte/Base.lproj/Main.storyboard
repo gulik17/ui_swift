@@ -273,12 +273,25 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FriendPhotoCell" id="GgY-Ss-nh7" customClass="FriendPhotoCell" customModule="vkontakte" customModuleProvider="target">
-                                <rect key="frame" x="5" y="0.0" width="100" height="135"/>
+                                <rect key="frame" x="5" y="0.0" width="100" height="124"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="V3Z-81-2Z8">
-                                    <rect key="frame" x="0.0" y="0.0" width="100" height="135"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="124"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GKy-im-Kje" customClass="LikeButton" customModule="vkontakte" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="100" width="100" height="24"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="24" id="8ur-Ja-2VA"/>
+                                            </constraints>
+                                            <state key="normal" title="99" image="suit.heart.fill" catalog="system">
+                                                <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="likeBtn:" destination="GgY-Ss-nh7" eventType="touchUpInside" id="olz-BL-bZX"/>
+                                                <action selector="setLike:" destination="b6G-fZ-j8V" eventType="touchUpInside" id="6ak-wG-3RQ"/>
+                                            </connections>
+                                        </button>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="qN5-cj-Vyn">
                                             <rect key="frame" x="0.0" y="1" width="100" height="97.5"/>
                                             <constraints>
@@ -286,48 +299,18 @@
                                                 <constraint firstAttribute="width" secondItem="qN5-cj-Vyn" secondAttribute="height" multiplier="1:1" id="bYk-TZ-cmQ"/>
                                             </constraints>
                                         </imageView>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KqL-zz-5ov" customClass="LikeBtnView" customModule="vkontakte" customModuleProvider="target">
-                                            <rect key="frame" x="8" y="105" width="84" height="22"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N9f-Jf-fur">
-                                                    <rect key="frame" x="30" y="2" width="54" height="20"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Rsu-Zp-3Jb">
-                                                    <rect key="frame" x="0.0" y="1.5" width="21" height="18.5"/>
-                                                    <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                </imageView>
-                                            </subviews>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                            <constraints>
-                                                <constraint firstItem="N9f-Jf-fur" firstAttribute="top" secondItem="KqL-zz-5ov" secondAttribute="top" constant="2" id="7iT-DC-Xv9"/>
-                                                <constraint firstAttribute="bottom" secondItem="N9f-Jf-fur" secondAttribute="bottom" id="9Ux-5J-8vL"/>
-                                                <constraint firstAttribute="height" constant="22" id="GBj-r5-pSI"/>
-                                                <constraint firstAttribute="trailing" secondItem="N9f-Jf-fur" secondAttribute="trailing" id="GEP-QM-Iag"/>
-                                                <constraint firstItem="Rsu-Zp-3Jb" firstAttribute="leading" secondItem="KqL-zz-5ov" secondAttribute="leading" id="WSE-Yh-uB2"/>
-                                                <constraint firstAttribute="bottom" secondItem="Rsu-Zp-3Jb" secondAttribute="bottom" constant="1" id="mvF-ZR-IiJ"/>
-                                                <constraint firstItem="Rsu-Zp-3Jb" firstAttribute="top" secondItem="KqL-zz-5ov" secondAttribute="top" id="r64-tv-kLu"/>
-                                                <constraint firstItem="N9f-Jf-fur" firstAttribute="leading" secondItem="Rsu-Zp-3Jb" secondAttribute="leading" constant="30" id="t0g-VL-cei"/>
-                                            </constraints>
-                                            <connections>
-                                                <outlet property="likeImg" destination="Rsu-Zp-3Jb" id="jOX-1g-gxx"/>
-                                                <outlet property="likeLabel" destination="N9f-Jf-fur" id="e9L-c4-8IO"/>
-                                            </connections>
-                                        </view>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="KqL-zz-5ov" secondAttribute="bottom" constant="8" id="3qu-Cw-ZuD"/>
                                         <constraint firstAttribute="trailing" secondItem="qN5-cj-Vyn" secondAttribute="trailing" id="CLa-ND-A72"/>
-                                        <constraint firstItem="KqL-zz-5ov" firstAttribute="leading" secondItem="V3Z-81-2Z8" secondAttribute="leading" constant="8" id="DfX-0t-DXj"/>
-                                        <constraint firstAttribute="trailing" secondItem="KqL-zz-5ov" secondAttribute="trailing" constant="8" id="HQd-1f-Jnh"/>
                                         <constraint firstItem="qN5-cj-Vyn" firstAttribute="leading" secondItem="V3Z-81-2Z8" secondAttribute="leading" id="N5Q-6o-COC"/>
-                                        <constraint firstAttribute="bottom" secondItem="qN5-cj-Vyn" secondAttribute="bottom" constant="35" id="uOz-y0-vwX"/>
+                                        <constraint firstAttribute="trailing" secondItem="GKy-im-Kje" secondAttribute="trailing" id="RWB-Xa-fpC"/>
+                                        <constraint firstItem="GKy-im-Kje" firstAttribute="leading" secondItem="V3Z-81-2Z8" secondAttribute="leading" id="Xgz-QJ-NPL"/>
+                                        <constraint firstAttribute="bottom" secondItem="GKy-im-Kje" secondAttribute="bottom" id="g8i-m7-Hkv"/>
+                                        <constraint firstAttribute="bottom" secondItem="qN5-cj-Vyn" secondAttribute="bottom" constant="24" id="uOz-y0-vwX"/>
                                         <constraint firstItem="qN5-cj-Vyn" firstAttribute="top" secondItem="V3Z-81-2Z8" secondAttribute="top" id="uRG-2P-iKf"/>
                                     </constraints>
                                 </collectionViewCellContentView>
-                                <size key="customSize" width="100" height="135"/>
+                                <size key="customSize" width="100" height="124"/>
                                 <connections>
                                     <outlet property="photo" destination="qN5-cj-Vyn" id="nCx-KW-OyG"/>
                                 </connections>
@@ -341,6 +324,7 @@
                     <navigationItem key="navigationItem" title="Фотографии" id="iZz-c8-S9n"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QAa-Tb-28T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="b6G-fZ-j8V" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4549.6000000000004" y="-237.03148425787109"/>
         </scene>
@@ -494,11 +478,11 @@
     </scenes>
     <resources>
         <image name="camera.rotate" catalog="system" width="64" height="48"/>
-        <image name="heart.fill" catalog="system" width="64" height="54"/>
         <image name="person.3.fill" catalog="system" width="71" height="34"/>
         <image name="person.crop.circle" catalog="system" width="64" height="60"/>
         <image name="person.crop.square" catalog="system" width="64" height="56"/>
         <image name="person.fill" catalog="system" width="64" height="60"/>
         <image name="speaker.3" catalog="system" width="64" height="44"/>
+        <image name="suit.heart.fill" catalog="system" width="64" height="54"/>
     </resources>
 </document>
