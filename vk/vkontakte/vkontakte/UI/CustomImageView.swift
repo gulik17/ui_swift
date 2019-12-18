@@ -8,46 +8,16 @@
 
 import UIKit
 
-@IBDesignable class CustomImageView: UIView {
+class CustomImageView: UIView {
     private var shadowLayer: CAShapeLayer!
-
-    @IBInspectable var cornerRadius: CGFloat = 25 {
-        didSet {
-            setNeedsDisplay()
-        }
-    }
-
-    @IBInspectable var shadowColor: UIColor = .systemTeal {
-        didSet {
-            setNeedsDisplay()
-        }
-    }
-
-    @IBInspectable var shadowRadius: CGFloat = 10 {
-        didSet {
-            setNeedsDisplay()
-        }
-    }
-
-    @IBInspectable var shadowOpacity: Float = 1 {
-        didSet {
-            setNeedsDisplay()
-        }
-    }
 
     override func layoutSubviews() {
         super.layoutSubviews()
         if shadowLayer == nil {
             shadowLayer = CAShapeLayer()
-            shadowLayer.path = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius).cgPath
+            shadowLayer.path = UIBezierPath(roundedRect: bounds, cornerRadius: 25).cgPath
             shadowLayer.fillColor = UIColor.white.cgColor
-            shadowLayer.shadowColor = shadowColor.cgColor
-            shadowLayer.shadowPath = shadowLayer.path
-            shadowLayer.shadowOffset = .zero
-            shadowLayer.shadowOpacity = shadowOpacity
-            shadowLayer.shadowRadius = shadowRadius
             layer.insertSublayer(shadowLayer, at: 0)
         }
-        setNeedsDisplay()
     }
 }

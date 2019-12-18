@@ -18,7 +18,6 @@ class FriendPhotoList: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Загружен пользователь \(user!)")
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
