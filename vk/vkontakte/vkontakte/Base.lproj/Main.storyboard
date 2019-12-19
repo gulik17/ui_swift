@@ -308,7 +308,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jTH-cb-eEO" customClass="CustomImageView" customModule="vkontakte" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jTH-cb-eEO" customClass="RoundView" customModule="vkontakte" customModuleProvider="target">
                                             <rect key="frame" x="15" y="2" width="50" height="50"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="lHd-3G-UBy">
@@ -513,6 +513,11 @@
                                                     <constraint firstItem="0xQ-De-GRR" firstAttribute="centerX" secondItem="Gzx-RE-gFn" secondAttribute="centerX" id="yKD-75-JDq"/>
                                                     <constraint firstItem="vU9-TS-gnK" firstAttribute="centerX" secondItem="Gzx-RE-gFn" secondAttribute="centerX" id="zP7-ce-4iY"/>
                                                 </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="93C-GE-Cs1" customClass="loader" customModule="vkontakte" customModuleProvider="target">
+                                                <rect key="frame" x="153" y="56" width="68" height="22"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" red="0.30871701239999999" green="0.47903972859999999" blue="0.706877172" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

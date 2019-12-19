@@ -44,6 +44,7 @@ class LikeButton: UIButton {
         setTitle(String(describing: likeCount), for: .normal)
         tintColor = .red
         setTitleColor(.red, for: .normal)
+        animatedLikeButton()
     }
     
     private func unsetLike() {
@@ -51,5 +52,18 @@ class LikeButton: UIButton {
         setTitle(String(describing: likeCount), for: .normal)
         tintColor = .label
         setTitleColor(.label, for: .normal)
+        animatedLikeButton()
+    }
+    
+    private func animatedLikeButton() {
+        let animation = CASpringAnimation(keyPath: "transform.scale")
+        animation.fromValue = 1.1
+        animation.toValue = 1
+        animation.stiffness = 500
+        animation.mass = 1
+        animation.duration = 1
+        //animation.beginTime = CACurrentMediaTime()
+        animation.fillMode = CAMediaTimingFillMode.both
+        layer.add(animation, forKey: nil)
     }
 }

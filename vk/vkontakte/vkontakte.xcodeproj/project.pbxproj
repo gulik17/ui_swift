@@ -23,6 +23,9 @@
 		C31369572396813E000E0230 /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31369562396813E000E0230 /* GroupCell.swift */; };
 		C3136959239683F2000E0230 /* AllGroupList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3136958239683F2000E0230 /* AllGroupList.swift */; };
 		C323B036239998000099B2AC /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C323B035239998000099B2AC /* CustomImageView.swift */; };
+		C33D679923ABED95001FA624 /* loader.xib in Resources */ = {isa = PBXBuildFile; fileRef = C33D679823ABED95001FA624 /* loader.xib */; };
+		C33D679B23ABF099001FA624 /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33D679A23ABF099001FA624 /* RoundView.swift */; };
+		C33D679D23ABF66B001FA624 /* loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33D679C23ABF66B001FA624 /* loader.swift */; };
 		C3732FB023AAB0BE00579F04 /* NewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3732FAF23AAB0BE00579F04 /* NewCell.swift */; };
 		C37BEC4F239A3F6900C4880D /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37BEC4E239A3F6900C4880D /* LikeButton.swift */; };
 		C3D0A66123AAAA2400C916EE /* NewList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D0A66023AAAA2400C916EE /* NewList.swift */; };
@@ -47,6 +50,9 @@
 		C31369562396813E000E0230 /* GroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
 		C3136958239683F2000E0230 /* AllGroupList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupList.swift; sourceTree = "<group>"; };
 		C323B035239998000099B2AC /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
+		C33D679823ABED95001FA624 /* loader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = loader.xib; sourceTree = "<group>"; };
+		C33D679A23ABF099001FA624 /* RoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundView.swift; sourceTree = "<group>"; };
+		C33D679C23ABF66B001FA624 /* loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loader.swift; sourceTree = "<group>"; };
 		C3732FAF23AAB0BE00579F04 /* NewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCell.swift; sourceTree = "<group>"; };
 		C37BEC4E239A3F6900C4880D /* LikeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
 		C3D0A66023AAAA2400C916EE /* NewList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewList.swift; sourceTree = "<group>"; };
@@ -118,6 +124,9 @@
 			children = (
 				C323B035239998000099B2AC /* CustomImageView.swift */,
 				C37BEC4E239A3F6900C4880D /* LikeButton.swift */,
+				C33D679823ABED95001FA624 /* loader.xib */,
+				C33D679C23ABF66B001FA624 /* loader.swift */,
+				C33D679A23ABF099001FA624 /* RoundView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -182,6 +191,7 @@
 			files = (
 				C31284BE2389230000CD0810 /* LaunchScreen.storyboard in Resources */,
 				C31284BB2389230000CD0810 /* Assets.xcassets in Resources */,
+				C33D679923ABED95001FA624 /* loader.xib in Resources */,
 				C31284B9238922FA00CD0810 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -196,6 +206,7 @@
 				C313695323967CD8000E0230 /* Group.swift in Sources */,
 				C313694E23965575000E0230 /* FriendPhotoCell.swift in Sources */,
 				C3732FB023AAB0BE00579F04 /* NewCell.swift in Sources */,
+				C33D679B23ABF099001FA624 /* RoundView.swift in Sources */,
 				C31369572396813E000E0230 /* GroupCell.swift in Sources */,
 				C31284B6238922FA00CD0810 /* ViewController.swift in Sources */,
 				C31284B2238922FA00CD0810 /* AppDelegate.swift in Sources */,
@@ -206,6 +217,7 @@
 				C313695123967B3C000E0230 /* User.swift in Sources */,
 				C37BEC4F239A3F6900C4880D /* LikeButton.swift in Sources */,
 				C31284B4238922FA00CD0810 /* SceneDelegate.swift in Sources */,
+				C33D679D23ABF66B001FA624 /* loader.swift in Sources */,
 				C31369482396340A000E0230 /* FriendList.swift in Sources */,
 				C313694A239647D4000E0230 /* FriendCell.swift in Sources */,
 				C323B036239998000099B2AC /* CustomImageView.swift in Sources */,

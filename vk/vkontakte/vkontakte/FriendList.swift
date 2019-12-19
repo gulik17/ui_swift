@@ -95,7 +95,11 @@ class FriendList: UITableViewController {
 extension FriendList: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         let friendDictionary = Dictionary.init(grouping: friends.filter { (user) -> Bool in
-            return searchText.isEmpty ? true : user.name.lowercased().contains(searchText.lowercased())
+            if ( user.name.lowercased().contains(searchText.lowercased()) ) {
+                return user.name.lowercased().contains(searchText.lowercased())
+            } else {
+                return searchText.isEmpty ? true : user.surname.lowercased().contains(searchText.lowercased())
+            }
         }) { $0.surname.prefix(1) }
         friendSection = friendDictionary.map { Section(title: String($0.key), items: $0.value) }
         friendSection.sort { $0.title < $1.title }
