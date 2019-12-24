@@ -420,11 +420,41 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Фотографии" id="iZz-c8-S9n"/>
+                    <connections>
+                        <segue destination="e3y-9s-mB5" kind="show" id="pB9-hd-IH9"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QAa-Tb-28T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="b6G-fZ-j8V" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4550" y="93"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="EQy-mf-RbY">
+            <objects>
+                <viewController id="e3y-9s-mB5" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="G9P-PB-6tN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VK_Blue_Logo_transparent" translatesAutoresizingMaskIntoConstraints="NO" id="Vxs-UC-iAx">
+                                <rect key="frame" x="0.0" y="44" width="375" height="574"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="e5K-TQ-Zk7" firstAttribute="bottom" secondItem="Vxs-UC-iAx" secondAttribute="bottom" id="XBF-UE-zQj"/>
+                            <constraint firstItem="e5K-TQ-Zk7" firstAttribute="trailing" secondItem="Vxs-UC-iAx" secondAttribute="trailing" id="dRe-lf-nbO"/>
+                            <constraint firstItem="Vxs-UC-iAx" firstAttribute="leading" secondItem="e5K-TQ-Zk7" secondAttribute="leading" id="kuy-aV-eK6"/>
+                            <constraint firstItem="Vxs-UC-iAx" firstAttribute="top" secondItem="e5K-TQ-Zk7" secondAttribute="top" id="xaU-FG-hJB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="e5K-TQ-Zk7"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5Dg-ln-PVf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hLa-ug-zqD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5360.8000000000002" y="92.203898050974516"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">

@@ -11,8 +11,7 @@ import UIKit
 class FriendPhotoCell: UICollectionViewCell {
     
     @IBOutlet weak var photo: UIImageView!
-    
-    
+
     @IBAction func likeBtn(_ sender: LikeButton) {
         sender.like()
     }
