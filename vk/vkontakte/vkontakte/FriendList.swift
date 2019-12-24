@@ -55,7 +55,8 @@ class FriendList: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int){
-        view.tintColor = UIColor(displayP3Red: 255, green: 255, blue: 255, alpha: 0.8)
+        //view.tintColor = UIColor(displayP3Red: 255, green: 255, blue: 255, alpha: 0.8)
+        view.tintColor = UIColor.white
         let header = view as! UITableViewHeaderFooterView
         header.textLabel?.textColor = UIColor.label
     }
