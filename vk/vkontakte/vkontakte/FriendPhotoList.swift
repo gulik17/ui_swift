@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import INSPhotoGallery
 
 private let reuseIdentifier = "FriendPhotoCell"
 
@@ -29,10 +30,28 @@ class FriendPhotoList: UICollectionViewController {
         return cell
     }
     
+    lazy var photos: [INSPhotoViewable] = {
+        return [
+            INSPhoto(imageURL: URL(string: "https://inspace.io/assets/portfolio/thumb/13-3f15416ddd11d38619289335fafd498d.jpg"), thumbnailImage: UIImage(named: "thumbnailImage")!),
+            INSPhoto(imageURL: URL(string: "https://inspace.io/assets/portfolio/thumb/13-3f15416ddd11d38619289335fafd498d.jpg"), thumbnailImage: UIImage(named: "thumbnailImage")!),
+            INSPhoto(image: UIImage(named: "fullSizeImage")!, thumbnailImage: UIImage(named: "thumbnailImage")!),
+        ]
+    }()
+    
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(identifier: "FriendPhotoSliderController")
+        let cell = collectionView.cellForItem(at: indexPath) as! FriendPhotoCell
+        let currentPhoto = photos[indexPath.row]
+        
+        print(currentPhoto)
+        let galleryPreview = INSPhotosViewController(photos: photos, initialPhoto: currentPhoto, referenceView: cell)
 
-        self.navigationController?.pushViewController(vc, animated: true)
+        galleryPreview.referenceViewForPhotoWhenDismissingHandler = { [weak self] photo in
+            if let index = self?.photos.firstIndex(where: {$0 === photo}) {
+                let indexPath = NSIndexPath(item: index, section: 0)
+                return collectionView.cellForItem(at: indexPath as IndexPath) as? FriendPhotoCell
+            }
+            return nil
+        }
+        present(galleryPreview, animated: true, completion: nil)
     }
 }
